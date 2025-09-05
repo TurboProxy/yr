@@ -1,0 +1,167 @@
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+    &lt;title&gt;Earl&#39;s Pool and Lawn Care&lt;/title&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;
+    &lt;style&gt;
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: &#39;Oswald&#39;, Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #004d40;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #announcement {
+            background: repeating-linear-gradient(
+                135deg,
+                #d32f2f,
+                #d32f2f 10px,
+                #b71c1c 10px,
+                #b71c1c 20px
+            );
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.1rem;
+            font-family: &#39;Oswald&#39;, sans-serif;
+            animation: wave 3s linear infinite;
+        }
+        @keyframes wave {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 40px 40px;
+            }
+        }
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            flex-grow: 1;
+            background-color: #e0f7fa;
+            transition: background-color 0.3s ease;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        a {
+            color: #80cbc4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Developer button */
+        .dev-button {
+            display: inline-block;
+            background-color: #004d40;
+            color: #80cbc4;
+            border: 2px solid #80cbc4;
+            padding: 10px 20px;
+            font-family: &#39;Oswald&#39;, sans-serif;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 20px auto 0;
+        }
+        .dev-button:hover {
+            background-color: #80cbc4;
+            color: #004d40;
+        }
+        .dev-button-container {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 900px;
+            padding: 0 20px 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;announcement&quot; style=&quot;display:none;&quot;&gt;
+        ⚠️ Important Announcement: This website has been made recently. If there are any bugs, please contact us. ⚠️
+    &lt;/div&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Earl&#39;s Pool and Lawn Care&lt;/h1&gt;
+        &lt;p&gt;Your trusted partner for a beautiful yard and sparkling pool&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;main id=&quot;main-content&quot;&gt;
+        &lt;section&gt;
+            &lt;h2&gt;About Us&lt;/h2&gt;
+            &lt;p&gt;At Earl&#39;s Pool and Lawn Care, we provide expert maintenance and landscaping services to keep your outdoor spaces looking their best all year round. From pool cleaning to lawn mowing, we handle it all with professionalism and care.&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Our Services&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Pool Cleaning and Maintenance&lt;/li&gt;
+                &lt;li&gt;Lawn Mowing and Edging&lt;/li&gt;
+                &lt;li&gt;Garden Bed Care and Mulching&lt;/li&gt;
+                &lt;li&gt;Weed Control&lt;/li&gt;
+                &lt;li&gt;Seasonal Lawn Treatments&lt;/li&gt;
+                &lt;li&gt;Pool Equipment Repair&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/section&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Contact Us&lt;/h2&gt;
+            &lt;p&gt;Ready to make your yard and pool shine? Get in touch!&lt;/p&gt;
+            &lt;p&gt;Email: &lt;a href=&quot;mailto:earlspoolcare@example.com&quot;&gt;earlspoolcare@example.com&lt;/a&gt;&lt;/p&gt;
+            &lt;p&gt;Phone: (555) 123-4567&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;div class=&quot;dev-button-container&quot;&gt;
+        &lt;a href=&quot;https://sites.google.com/ibaldwin.org/earl/devs-only&quot; class=&quot;dev-button&quot; title=&quot;Developer Page&quot;&gt;Developer Page&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2025 Earl&#39;s Pool and Lawn Care. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+
+    &lt;script&gt;
+        // Toggle this to true to show the red wavy announcement banner
+        const showAnnouncement = true;
+
+        // Toggle this to true to use an alternate background color for the main content area
+        const useAlternateBackground = false;
+
+        if (showAnnouncement) {
+            document.getElementById(&#39;announcement&#39;).style.display = &#39;block&#39;;
+        }
+
+        if (useAlternateBackground) {
+            document.getElementById(&#39;main-content&#39;).style.backgroundColor = &#39;#c8e6c9&#39;; // light green as example
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" jsaction="rcuQ6b:WYd;"><div class="EmVfjc qs41qe UzswCe" data-loadingmessage=" " jscontroller="qAKInc" jsaction="animationend:kWijWc;dyRcpb:dyRcpb" data-active="true" jsname="Hy6Uif"><div class="Cg7hO" aria-live="assertive" jsname="vyyg5"> </div><div jsname="Hxlbvc" class="xu46lf"><div class="ir3uv uWlRce co39ub"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div><div class="ir3uv GFoASc Cn087"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div><div class="ir3uv WpeOqd hfsr6b"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div><div class="ir3uv rHV3jf EjXFBf"><div class="xq3j6 ERcjC"><div class="X6jHbb GOJTSe"></div></div><div class="HBnAAc"><div class="X6jHbb GOJTSe"></div></div><div class="xq3j6 dj3yTd"><div class="X6jHbb GOJTSe"></div></div></div></div></div><iframe jsname="WMhH6e" class=" YMEQtf" frameborder="0" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-storage-access-by-user-activation" id="5e9236fc9dfbcbe9_2" name="5e9236fc9dfbcbe9_2" scrolling="no" title="Custom embed" aria-label="Custom embed"></iframe></div></div></div></div></div></div><div jscontroller="j1RDQb" jsaction="rcuQ6b:rcuQ6b;MxH79b:JdcaS;FaOgy:XuHpsb;" class="dZA9kd ynRLnc" data-last-updated-at-time="1757033668398" data-is-preview="false"><div role="button" class="U26fgb JRtysb WzwrXb I12f0b K2mXPb zXBiaf ynRLnc" jscontroller="iSvg6e" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;;keydown:I481le;" jsshadow jsname="Bg3gkf" aria-label="Site actions" aria-disabled="false" tabindex="0" aria-haspopup="true" aria-expanded="false" data-menu-corner="bottom-start" data-anchor-corner="top-start"><div class="NWlf3e MbhUzd" jsname="ksKsZd"></div><span jsslot class="MhXXcc oJeWuf"><span class="Lw7GHd snByac"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class=" NMm5M"><path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/></svg></span></span><div jsname="xl07Ob" style="display:none" aria-hidden="true"><div class="JPdR6b hVNH5c" jscontroller="uY3Nvd" jsaction="IpSVtb:TvD9Pc;fEN2Ze:xzS4ub;frq95c:LNeFm;cFpp9e:J9oOtd; click:H8nU8b; mouseup:H8nU8b; keydown:I481le; keypress:Kr2w4b; blur:O22p3e; focus:H8nU8b" role="menu" tabindex="0" style="position:fixed"><div class="XvhY1d" jsaction="mousedown:p8EH2c; touchstart:p8EH2c;"><div class="JAPqpe K0NPx"><span jsslot class="z80M1 FeRvI" jsaction="click:o6ZaF(preventDefault=true); mousedown:lAhnzb; mouseup:Osgxgf; mouseenter:SKyDAe; mouseleave:xq3APb;touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8" jsname="j7LFlb" data-disabled-tooltip="Contact is not available in preview mode" aria-label="Contact" role="menuitem" tabindex="-1"><div class="aBBjbd MbhUzd" jsname="ksKsZd"></div><div class="uyYuVb oJeWuf" jscontroller="j3gDVb" jsaction="JIbuQc:sGCPHc;" jsmodel="Rta7Nb" data-normalized-path="ibaldwin.org/earl/main"><div class="jO7h3c">Contact</div></div></span><span jsslot class="z80M1 FeRvI" jsaction="click:o6ZaF(preventDefault=true); mousedown:lAhnzb; mouseup:Osgxgf; mouseenter:SKyDAe; mouseleave:xq3APb;touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8" jsname="j7LFlb" aria-label="Report abuse" role="menuitem" tabindex="-1"><div class="aBBjbd MbhUzd" jsname="ksKsZd"></div><div class="uyYuVb oJeWuf" jscontroller="HYv29e" jsaction="JIbuQc:dQ6O0c;" jsname="lV5oke" data-abuse-proto="%.@.null,&quot;104523628337887810650&quot;,&quot;https://sites.google.com/ibaldwin.org/earl/main&quot;]" data-abuse-reporting-widget-proto="%.@.null,&quot;https://sites.google.com/ibaldwin.org/earl/main&quot;]"><div class="jO7h3c">Report abuse</div></div></span><span jsslot class="z80M1 FeRvI" jsaction="click:o6ZaF(preventDefault=true); mousedown:lAhnzb; mouseup:Osgxgf; mouseenter:SKyDAe; mouseleave:xq3APb;touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8" jsname="j7LFlb" aria-label="Page details" role="menuitem" tabindex="-1"><div class="aBBjbd MbhUzd" jsname="ksKsZd"></div><div class="uyYuVb oJeWuf" jsaction="JIbuQc:hriXLd;" jsname="Rg8K2c"><div class="jO7h3c">Page details</div></div></span></div></div></div></div></div></div><div jscontroller="j1RDQb" jsaction="focusin:gBxDVb(srlkmf); focusout:zvXhGb(srlkmf); click:ro2KTd(psdQ5e);JIbuQc:DSypkd(Bg3gkf);MxH79b:JdcaS;rcuQ6b:rcuQ6b;" class="LqzjUe ynRLnc" data-last-updated-at-time="1757033668398" data-is-preview="false"><div jsname="psdQ5e" class="Q0cSn"></div><div jsname="bN97Pc" class="hBW7Hb"><div role="button" class="U26fgb mUbCce fKz7Od kpPxtd QMuaBc M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;" jsshadow jsname="Bg3gkf" aria-label="Site actions" aria-disabled="false" tabindex="-1" aria-hidden="true"><div class="VTBa7b MbhUzd" jsname="ksKsZd"></div><span jsslot class="xjKiLb"><span class="Ce1Y1c" style="top: -12px"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class=" NMm5M"><path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/></svg></span></span></div><div jsname="srlkmf" class="hUphyc"><div class="YkaBSd"><div class="iBkmkf"><span>Page updated</span> <span jsname="CFIm1b" class="dji00c" jsaction="AHmuwe:eGiyHb; mouseover:eGiyHb;" tabindex="0" role="contentinfo"></span></div></div><div class="YkaBSd" jscontroller="j3gDVb" jsmodel="Rta7Nb" jsaction="click:sGCPHc;" data-normalized-path="ibaldwin.org/earl/main"><div role="button" class="U26fgb kpPxtd J7BuEb" jsshadow aria-label="Contact " aria-disabled="false" tabindex="0">Contact</div></div><div class="YkaBSd" jscontroller="HYv29e" jsaction="click:dQ6O0c;" data-abuse-proto="%.@.null,&quot;104523628337887810650&quot;,&quot;https://sites.google.com/ibaldwin.org/earl/main&quot;]" data-abuse-reporting-widget-proto="%.@.null,&quot;https://sites.google.com/ibaldwin.org/earl/main&quot;]"><div role="button" class="U26fgb kpPxtd J7BuEb" jsshadow aria-label="Report abuse" aria-disabled="false" tabindex="0">Report abuse</div></div></div></div></div><div jsname="kdb7zb"><div jscontroller="kklOXe" jsmodel="nbZU0e" jsaction="rcuQ6b:rcuQ6b;FaOgy:nkegzf;BU3dg:U3QbAf;HRy4zb:Z8zbSc;" class="Pt0Du TSZdd"><div class="mF4yBc" jsname="LgbsSe"><div jscontroller="TW9Rvc" jsaction="rcuQ6b:WYd;"><div role="presentation" class="U26fgb XHsn7e MAXCNe M9Bg4d" jscontroller="VXdfxd" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;" jsshadow jsname="LgbsSe" aria-label="Edit this page" aria-disabled="false" data-tooltip="Edit this page" data-tooltip-vertical-offset="-12" data-tooltip-horizontal-offset="0"><a class="FKF6mc TpQm9d" href="/u/0/d/11w2_M83_CcPv5BDWO4AEvbHI51b8U_KA/p/1nK2WsmQYFHoH1xROtkaZqaVl4QoQolbs/edit?authuser=0&amp;usp=edit_published_site" aria-label="Edit this page"><div class="HaXdpb wb61gb"></div><div class="HRp7vf MbhUzd" jsname="ksKsZd"></div><span jsslot class="Ip8zfc"><svg class="EI709d" viewBox="0 0 24 24" fill="currentColor" focusable="false"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></a></div></div></div></div></div></div></div></div><script nonce="xvA033PyrCMjkB-VRxEPdQ">DOCS_timing['cov']=new Date().getTime();</script><script src="https://www.gstatic.com/_/atari/_/js/k=atari.vw.en.12tLlhYqASQ.O/am=AIEBCA/d=1/rs=AGEqA5mWo5i6IsYeN_7YDQq-xfWZ-vs4kA/m=view" id="base-js" nonce="xvA033PyrCMjkB-VRxEPdQ"></script></div></div><div jscontroller="YV8yqd" jsaction="rcuQ6b:npT2md"></div></body></html>
